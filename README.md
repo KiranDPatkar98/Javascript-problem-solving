@@ -16,6 +16,7 @@ const countVowels = (value) => {
 }
 
 console.log(countVowels('KDpio0oaaa'));
+```
 
 
 ##2  Count the number of unique vowel in the string
