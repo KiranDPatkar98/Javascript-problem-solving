@@ -39,3 +39,69 @@ const countVowels=(value)=>{
 console.log(countVowels('KiranaaaWery'))
 
 ```
+## 3. Write a JavaScript function named getDenominations that takes two parameters - amount (target amount) and denominations (an array of available denominations in descending order). The function should return an object representing the count of each denomination needed to represent the given amount. Provide an example usage with denominations [2000, 500, 100] and an amount of 6700.
+
+```javascript
+const getDenominations=(amount,denominations)=>{
+    const sortedDenomination=denominations.sort((a,b)=>b-a)
+    const res={}
+    for(let i=0; i<sortedDenomination.length; i+=1){
+        const count=Math.floor(amount/sortedDenomination[i])
+        if(count>0){
+        res[sortedDenomination[i]]=count;
+        amount=amount%sortedDenomination[i]
+        } else{
+        res[sortedDenomination[i]]=0
+        }
+    }
+    return res
+}
+
+console.log(getDenominations(6700,[2000,500,300,100]))
+```
+
+## 4. // console the object values so the function should work dynamic for any object's
+```javascript
+const objectValue={
+    'employees':{
+        'employeename':'Nanda',
+        'employeeId':"123",
+        'employeeAddress':{
+            'location':'Bangalore'
+        }
+    },
+}
+// output should come like this
+    // 'employeename':'Nanda',
+    // 'employeeId':'123',
+    // 'location':'Bangalore',
+Answer:
+const keyValuePairs=(obj)=>{
+for (const key in obj){
+    if(typeof obj[key] ==='object'){
+        keyValuePairs(obj[key])
+    }else
+    {
+        console.log(`${key} : ${obj[key]}`)
+    }
+}
+}
+console.log(keyValuePairs(objectValue))
+```
+
+## 5. Javascript program to check Prime number
+```javascript
+const isPrime=(number)=>{
+    if (number < 2) {
+        return false;
+    }
+    for(let i=2;i<=Math.sqrt(number);i+=1){
+        if(number % i===0){
+            return false
+        }
+        return true
+    }
+}
+console.log(isPrime(11))
+
+
