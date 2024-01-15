@@ -16,10 +16,12 @@ const countVowels = (value) => {
 }
 
 console.log(countVowels('KDpio0oaaa'));
-```
 
 ```
-##2  Count the number of unique vowel in the string
+
+
+## 2.  Count the number of unique vowel in the string
+```javascript
 const countVowels=(value)=>{
     const lowerCase=value.toLowerCase()
     const vowels=['a','e','i', 'o','u']
@@ -35,4 +37,5 @@ const countVowels=(value)=>{
     
 }
 console.log(countVowels('KiranaaaWery'))
+
 ```
