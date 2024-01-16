@@ -144,3 +144,30 @@ const moveZeros=(list)=>{
 console.log(moveZeros([1,0,2,3,0,0,2,5]))
 ```
 
+## 8 JavaScript Program to Find the Factorial of a Number
+
+```javascript
+
+const factorial=(number)=>{
+    let fact=1;
+    for (let i=number;i>=1;i--){
+        fact=fact*i
+    }
+    return fact
+}
+console.log(factorial(0))
+```
+
+## 9 JavaScript Program to print the Fibonacci sequence
+
+```javascript
+
+const fibonacci=(range)=>{
+    const fib=[0,1]
+    for(let i=2; i<range; i+=1){
+        fib.push(fib[fib.length-1]+fib[fib.length-2])
+    }
+    return fib
+}
+console.log(fibonacci(20))
+```
