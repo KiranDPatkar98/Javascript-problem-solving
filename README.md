@@ -103,5 +103,44 @@ const isPrime=(number)=>{
     }
 }
 console.log(isPrime(11))
+```
 
+## 6. JavaScript Program to Print All Prime Numbers in an Interval
+```javascript
+const checkPrime=(number)=>{
+    for(const i=2; i<=Math.sqrt(number); i+=1){
+       if(number % i===0){
+           return false
+       } else{
+           return true
+       }
+    }
+}
+
+const printPrimeNumbers=(range1, range2)=>{
+    for(let i=range1; i <=range2; i+=1){
+       if(checkPrime(i)){
+           console.log(i)
+       }
+    }
+}
+console.log(printPrimeNumbers(100, 150))
+```
+
+## 7 Move all the zeros at the end of list
+```javascript
+const moveZeros=(list)=>{
+    const zeros=[]
+    const nonZeros=[]
+    for (let i=0; i<list.length; i+=1){
+        if(list[i]!==0){
+            zeros.push(list[i])
+        }else{
+            nonZeros.push(list[i])
+        }
+    }
+    return zeros.concat(nonZeros)
+}
+console.log(moveZeros([1,0,2,3,0,0,2,5]))
+```
 
