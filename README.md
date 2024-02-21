@@ -170,3 +170,23 @@ const fibonacci=(range)=>{
 }
 console.log(fibonacci(20))
 ```
+
+## 10 You are given a string and you need to rotate it based on the specified position and direction.
+
+```javascript
+
+const rotateString=(string, position,direction)=>{
+    const sliceValue =direction==='left'? 1 :-1
+    // if(sliceValue===1){
+    // return string.slice(position)+string.slice(0,position)
+    // }
+    // return string.slice(-position)+ string.slice(0, -position)
+    return string.slice(position*sliceValue)+ string.slice(0, position*sliceValue)
+    
+}
+
+
+console.log(rotateString('python',2 ,'left'))  //thonpy
+console.log(rotateString('python',2 ,'right')) //onpyth
+
+```
