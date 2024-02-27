@@ -192,9 +192,9 @@ console.log(rotateString('python',2 ,'right')) //onpyth
 ```
 
 ## 11 Find the Index of the First Occurrence in a String.
-
+```javascript
         ### Without using methods
-        ```javascript
+        
         const findIndex=(sentence, search)=>{
             for(let i=0;i<=sentence.length-1;i+=1){
                let found=true;
@@ -211,10 +211,10 @@ console.log(rotateString('python',2 ,'right')) //onpyth
            return -1
         }
         
-        ```
+       
         ### Using method
 
-         ```javascript
+        
         const findIndex=(sentence, search)=>{
            
            return sentence.indexOf(search)
