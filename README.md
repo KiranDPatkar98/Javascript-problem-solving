@@ -190,3 +190,35 @@ console.log(rotateString('python',2 ,'left'))  //thonpy
 console.log(rotateString('python',2 ,'right')) //onpyth
 
 ```
+
+## 11 Find the Index of the First Occurrence in a String.
+
+        ### Without using methods
+        ```javascript
+        const findIndex=(sentence, search)=>{
+            for(let i=0;i<=sentence.length-1;i+=1){
+               let found=true;
+               for(let j=0; j<=search.length-1; j+=1){
+                   if(sentence[i+j] !== search[j]){
+                       found=false
+                       break
+                   } 
+               }
+               if(found){
+                   return i
+               }
+           }
+           return -1
+        }
+        
+        ```
+        ### Using method
+
+         ```javascript
+        const findIndex=(sentence, search)=>{
+           
+           return sentence.indexOf(search)
+        }
+        
+        console.log(findIndex('kiran is bad', 'bad'))
+```
