@@ -222,3 +222,23 @@ console.log(rotateString('python',2 ,'right')) //onpyth
         
         console.log(findIndex('kiran is bad', 'bad'))
 ```
+
+## 12  Find the indexes of target value which is provided using o(n)
+```javascript
+const arr=[4,7,8,1,3,2,5,12]
+
+const findIndices=(arr, target)=>{
+    const obj={}
+    for(let i=0;i<=arr.length-1; i+=1){
+       if(arr[i] in obj){
+           return [obj[arr[i]],i]
+       }else{
+               obj[target-arr[i]]=i 
+       }
+   
+    }
+    return obj
+}
+
+console.log(findIndices(arr, 13))  // [ 2, 6 ]
+```
