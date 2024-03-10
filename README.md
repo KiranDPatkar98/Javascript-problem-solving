@@ -242,3 +242,24 @@ const findIndices=(arr, target)=>{
 
 console.log(findIndices(arr, 13))  // [ 2, 6 ]
 ```
+## 13 Find the count of consecutive number 
+## input=[1,1,1,1,2,2,3,3,3,4,4,4,1,1]
+## output=[4,2,3,3,2]
+
+```javascript
+const findConsecutiveCount=(array)=>{
+    const newArr=[]
+    let temp;
+    for(let i=0; i<=array.length-1;i+=1){
+       if(temp===array[i]){
+           newArr[newArr.length-1]=newArr.at(-1)+1
+       }else{
+           temp=array[i]
+           newArr.push(1)
+       }
+    }
+    return newArr
+}
+console.log(findConsecutiveCount([1,1,1,1,2,2,3,3,3,4,4,4,1,1]))
+```
+
