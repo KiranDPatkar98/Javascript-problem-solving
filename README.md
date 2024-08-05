@@ -262,4 +262,18 @@ const findConsecutiveCount=(array)=>{
 }
 console.log(findConsecutiveCount([1,1,1,1,2,2,3,3,3,4,4,4,1,1]))
 ```
+## 14 Two sum [Problem Statement](https://leetcode.com/problems/two-sum/)
 
+```javascript
+
+const twoSum = function(nums, target) {
+    const data={}
+    for (let i=0; i<=nums.length-1; i+=1){
+        if(nums[i] in data){
+            return [data[nums[i]], i]
+        }
+    data[target-nums[i]]=i
+    }
+};
+
+```
