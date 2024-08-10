@@ -277,3 +277,24 @@ const twoSum = function(nums, target) {
 };
 
 ```
+## Best time to buy and sell stock [Problem statement](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+
+```javascript
+var maxProfit = function(prices) {
+let maxProfit=0
+let left =0;
+let right=1
+while(right <=prices.length-1){
+    if(prices[left]> prices[right]) {
+          left=right       
+    }else{   
+      if (prices[right]-prices[left] > maxProfit){
+maxProfit=prices[right]-prices[left]
+      } 
+    }
+    right+=1  
+}
+return maxProfit
+};
+
+```
