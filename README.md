@@ -311,3 +311,21 @@ var maxSubArray = function(nums) {
 };
 
 ```
+
+## 17 Find the single number [Problem Statement](https://leetcode.com/problems/single-number/description/)
+
+```javascript
+
+var singleNumber = function(nums) {
+    const obj={}
+    for(let i=0; i<=nums.length-1;i+=1){
+     if(nums[i] in obj){
+        delete obj[nums[i]]
+     }else {
+        obj[nums[i]]=nums[i]
+     }
+    }
+    for (item in obj) return obj[item]
+};
+
+```
