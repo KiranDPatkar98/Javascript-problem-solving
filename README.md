@@ -281,20 +281,14 @@ const twoSum = function(nums, target) {
 
 ```javascript
 var maxProfit = function(prices) {
-let maxProfit=0
-let left =0;
-let right=1
-while(right <=prices.length-1){
-    if(prices[left]> prices[right]) {
-          left=right       
-    }else{   
-      if (prices[right]-prices[left] > maxProfit){
-maxProfit=prices[right]-prices[left]
-      } 
+    let buying_price=prices[0]
+    let maxProfit=0
+    for(let i=1; i<=prices.length-1;i+=1){
+     buying_price=Math.min(prices[i],buying_price)
+     maxProfit=Math.max(maxProfit,prices[i]-buying_price)
     }
-    right+=1  
-}
-return maxProfit
+    return maxProfit
+    
 };
 
 ```
