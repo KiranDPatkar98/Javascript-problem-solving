@@ -329,3 +329,21 @@ var singleNumber = function(nums) {
 };
 
 ```
+
+## 18 Reverse a string without using any extra variable [Problem statement](https://leetcode.com/problems/reverse-string/description/)
+
+```javascript
+
+var reverseString = function(s) {
+    let i=0;
+    let j=s.length-1
+    while(i<j){
+        [s[i],s[j]]=[s[j],s[i]]
+        i++;
+        j--;
+    }
+return s
+};
+
+
+```
